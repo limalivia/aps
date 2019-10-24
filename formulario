@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>teste1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    </script>
+    <style>
+        main
+    {
+     margin: 2px auto;
+     display: inline-block; 
+     border: 2px solid rgb(0, 0, 0); 
+     name= border-radius: 2px; 
+     padding: 10px; width: 40% 
+     } 
+    
+     {
+       margin-top: 2%;
+       } 
+       label
+       {
+        width: 500%;
+         display: inline-block; 
+         } 
+         </style>
+
+
+    <script>
+        
+        function valida() {
+            var caixaDoNumero = document.getElementById("numero");
+        }
+        function validaNome() {
+            var nome = document.getElementById("nome").value;
+            if (nome == "") {
+                alert("O campus nome obrigatório!")
+                return false;
+            }
+            if(nome.length<4){
+                alert("É obrigatório ter pelo menos 3 caracteres!")
+            }
+        }
+function validaemail() {
+    var email = document.getElementById("email").value;
+    var erroEmail = document.getElementById("erroEmail").value;
+    if(email.indexOf("@") == -1 && email.indexOf(".")== -1)
+    {
+        alerta("No e-mail é obrigatório ter '@' e'.' ")
+    }
+}
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <main>
+        <div>
+            <div id="perfil" class="painel"></div>
+            <div id="formulario" class="painel">
+                <h2>Cadastro</h2>
+                <form>
+                    Digite seu nome:<br>
+                    <input type="text" name="firstname" id="nome" value="">
+                    <br>
+                    Digite seu e-mail:<br>
+                    <input type="text" name="lastname" id="e-mail" value="">
+                    <br>
+                    Digite sua senha:<br>
+                    <input type="password" name="lastname" id="senha" value="">
+                    <br>
+                    Repita sua senha:<br>
+                    <input type="password" name="lastname" id="repetirSenha" value="">
+                    <br>
+                    <div class="form-group">
+                        <br>
+                        <label for="exampleFormControlSelect1">Módulo</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1-Módulo</option>
+                            <option>2-Módulo</option>
+                            <option>3-Módulo</option>
+                        </select>
+                    </div>
+                    <br>
+                    Matéria da sua preferência:<br>
+                    <input type="checkbox" name="gender" value="male" checked> Redes<br>
+                    <input type="checkbox" name="gender" value="female"> S.O<br>
+                    <input type="checkbox" name="gender" value="other"> APS<br>
+                    <br>
+                    <input type="submit" value="Salvar" onclick="validaNome(),validaremail();">
+                    <input type="reset" value="Limpar">
+                </form>
+
+            </div>
+    </main>
+
+</body>
+
+</html>
